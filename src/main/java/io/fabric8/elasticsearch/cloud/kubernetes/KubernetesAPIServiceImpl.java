@@ -46,7 +46,7 @@ public class KubernetesAPIServiceImpl extends AbstractLifecycleComponent<Kuberne
 
   public synchronized KubernetesClient client() {
     if (client == null) {
-      client = new DefaultKubernetesClient();
+      client = new DefaultKubernetesClient("kubernetes.default");
     }
     return client;
   }
